@@ -313,7 +313,9 @@ for entry in range(numberOfEntries):
         tree_out.phi1234 = float(jet1234.Phi())
         tree_out.m1234   = abs(float(jet1234.M()))
 
-        tree_out.ht      = float(branchHT.HT)
+    for i in range(branchHT.GetEntries()):
+        scalar = branchHT.ScalarHT(i)
+        tree_out.ht = scalar.HT()
 
     mssmhbb.Fill()
 
