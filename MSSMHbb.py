@@ -1,3 +1,4 @@
+
 import sys 
 
 import ROOT
@@ -236,28 +237,28 @@ for entry in range(numberOfEntries):
         tree_out.ptj1     = float(jet1.PT)
         tree_out.etaj1    = float(jet1.Eta)
         tree_out.phij1    = float(jet1.Phi)
-        tree_out.btagj1   = float(jet1.Btag)
+        tree_out.btagj1   = int(jet1.BTag)
         tree_out.flavorj1 = int(jet1.Flavor)
 
         tree_out.mj2      = float(jet2.Mass)
         tree_out.ptj2     = float(jet2.PT)
         tree_out.etaj2    = float(jet2.Eta)
         tree_out.phij2    = float(jet2.Phi)
-        tree_out.btagj2   = float(jet2.Btag)
+        tree_out.btagj2   = int(jet2.BTag)
         tree_out.flavorj2 = int(jet2.Flavor)
 
         tree_out.mj3      = float(jet3.Mass)
         tree_out.ptj3     = float(jet3.PT)
         tree_out.etaj3    = float(jet3.Eta)
         tree_out.phij3    = float(jet3.Phi)
-        tree_out.btagj3   = float(jet3.Btag)
+        tree_out.btagj3   = int(jet3.BTag)
         tree_out.flavorj3 = int(jet3.Flavor)
 
         tree_out.mj4      = float(jet4.Mass)
         tree_out.ptj4     = float(jet4.PT)
         tree_out.etaj4    = float(jet4.Eta)
         tree_out.phij4    = float(jet4.Phi)
-        tree_out.btagj4   = float(jet4.Btag)
+        tree_out.btagj4   = int(jet4.BTag)
         tree_out.flavorj4 = int(jet4.Flavor)
 
         tree_out.pt12     = float(dijet12.Pt())
@@ -315,7 +316,7 @@ for entry in range(numberOfEntries):
 
     for i in range(branchHT.GetEntries()):
         scalar = branchHT.At(i)
-        tree_out.ht = float(scalar.HT())
+        tree_out.ht = float(scalar.HT)
 
     mssmhbb.Fill()
 
