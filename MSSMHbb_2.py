@@ -217,10 +217,8 @@ for entry in range(numberOfEntries):
         jet3 = branchJet.At(2)
         jet4 = branchJet.At(3)
         
-        if (
-              (jet1.PT and jet2.PT and jet3.PT and jet4.PT >= 30) and 
-              (jet1.Eta and jet2.Eta and jet3.Eta and jet4.Eta < 2.4)
-            ):
+        if ((jet1.PT and jet2.PT and jet3.PT and jet4.PT >= 30) and 
+            (jet1.Eta and jet2.Eta and jet3.Eta and jet4.Eta < 2.4)):
 
             pjet1 = ROOT.TLorentzVector()
             pjet2 = ROOT.TLorentzVector()
